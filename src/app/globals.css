@@ -11,8 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 235, 235, 235;
+    --background-end-rgb: 235, 235, 235;
   }
 }
 
@@ -24,4 +24,65 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.page-wrapper {
+  padding: 50px 75px;
+  box-sizing: border-box;
+}
+
+/* Events CSS */
+
+.event-wrapper {
+  display: grid;
+  grid-template-columns: 0.33fr 0.67fr;
+  background-color: rgb(247, 247, 247);
+  max-height: 35vh;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.event-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.event-image {
+  max-height: 35vh;
+  width: auto;
+  border-radius: 10px 0 0 10px;
+}
+
+.event-information {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 15px 5px;
+}
+
+.event-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.event-name {
+  color: rgb(0, 76, 75);
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.event-subinformation {
+  color: rgb(75, 75, 75);
+  font-size: 0.85rem;
+}
+
+.event-description {
+  color: rgb(75, 75, 75);
+  font-size: 0.88rem;
+  margin-right: 10px;
 }
