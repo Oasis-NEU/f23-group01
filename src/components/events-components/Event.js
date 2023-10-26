@@ -13,6 +13,7 @@ image {event[0].name}
 */
 
 export default function Event({
+    imageURL,
     name,
     date,
     start_time,
@@ -22,7 +23,7 @@ export default function Event({
 }) {
   return (
     <div class="event-wrapper">
-        <img class="event-image" src="https://img.freepik.com/free-photo/vertical-selective-focus-closeup-british-short-haired-grey-cat_181624-42648.jpg" alt="cat"/>
+        <img class="event-image" src={imageURL} alt="cat"/>
         <div class="event-information">
             <div class="event-header">
                 <div class="event-name">{name}</div> 
