@@ -37,6 +37,7 @@ body {
   display: grid;
   grid-template-columns: 0.33fr 0.67fr;
   background-color: rgb(247, 247, 247);
+  gap: 10px;
   max-height: 35vh;
   width: 100%;
   border-radius: 10px;

@@ -1,4 +1,4 @@
-//import supabase from "../../supabase.js";
+import React from 'react'
 import '../../app/globals.css'
 import kitty from '../../images/shorthair.jpg'
 
