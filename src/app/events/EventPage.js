@@ -32,7 +32,7 @@ export default function Home() {
     <div>
       <div class="event-row">
       {events.map((event) => (
-      <Event
+      <Event key={event.id}
         imageURL={getEventImage(event.id)}
         name={event.name}
         date={event.date}
