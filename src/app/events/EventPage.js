@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import Event from '../../components/events-components/Event'
+import Header from '../../components/constant-components/header'
 
 //"https://img.freepik.com/free-photo/vertical-selective-focus-closeup-british-short-haired-grey-cat_181624-42648.jpg"
 
@@ -30,6 +31,7 @@ export default function Home() {
 
   return (
     <div>
+      <Header/>
       <div class="event-row">
       {events.map((event) => (
       <Event key={event.id}
