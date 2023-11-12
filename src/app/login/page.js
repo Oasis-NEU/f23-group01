@@ -33,6 +33,6 @@ export default function App() {
               appearance={{ theme: ThemeSupa }} />)
   }
   else {
-    redirect('/');
+    redirect('/login/account-details');
   }
 }
