@@ -15,10 +15,10 @@ export default function UploadEventForm() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         setName(event.target.value);
-        const { data, error } = await supabase.from("Events").insert(
+        const { data, dataError } = await supabase.from("Events").insert(
             {name: name, description: description, start_time: startTime, end_time: endTime, date: date, location: location, creator_id: null})
             .select()
-        const {error2 } = await supabase.storage.from('event-images').upload(data[0].id + "-image.jpg", image, {
+        const { storageError } = await supabase.storage.from('event-images').upload(data[0].id + "-image.jpg", image, {
               cacheControl: '3600',
               upsert: false
             })

@@ -1,21 +1,34 @@
-//import BusinessAccountCreation from '../../../components/login-components'
-//import UserAccountCreation from '../../../components/login-components'
+"use client";
+import { useState } from "react";
+import BusinessAccountCreation from '../../../components/login-components/BusinessAccountCreation'
+import UserAccountCreation from '../../../components/login-components/UserAccountCreation'
 
 export default function Home() {
-    
-    var user = True;
+
+    const [user, setUser] = useState(true)
+
+    function UserAccount() {
+        setUser(true)
+    }
+
+    function BusinessAccount() {
+        setUser(false)
+    }
+
     return (
-    <div>
-        <button onclick={user = true}>Make a user account</button>
-        <button onclick={user = false}>Make a business account</button>
-        if (user) {
-            <p>user account</p>
-            //<UserAccountCreation />
-        }
-        else {
-            //<BusinessAccountCreation />
-            <p>business account</p>
-        }
-    </div>
+        (user) ? (
+        <div>
+            <button onClick={UserAccount}>Make a user account</button>
+            <button onClick={BusinessAccount}>Make a business account</button>
+            <UserAccountCreation />
+        </div>
+        ) : (
+        <div>
+            <button onClick={UserAccount}>Make a user account</button>
+            <button onClick={BusinessAccount}>Make a business account</button>
+            <BusinessAccountCreation />
+        </div>
+        )
+
     )
 }
