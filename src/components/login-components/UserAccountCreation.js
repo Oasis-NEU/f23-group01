@@ -10,12 +10,12 @@ export default function UserAccountCreation() {
     
     const handleSubmit = async (event) => {
         event.preventDefault();
-        //const { userId, idError } = await supabase.auth.getSession()
-        //alert(userId)
+        const { userId, idError } = await supabase.auth.getUser()
         
-        const { data, dataError } = await supabase.from("Users").insert(
-            {user_name: username , first_name: first, last_name: last, uuid: 1}).select()
-        alert(data)
+        /*
+        const {dataError } = await supabase.from("Users").insert(
+            {user_name: username, first_name: first, last_name: last})
+        */
     }
     return (
         <div>

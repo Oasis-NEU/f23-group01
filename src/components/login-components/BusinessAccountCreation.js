@@ -10,11 +10,12 @@ export default function BusinessAccountCreation() {
     
     const handleSubmit = async (event) => {
         event.preventDefault();
-        //const { userId, idError } = await supabase.auth.getSession()
-        //alert(userId)
+        const { userId, idError } = await supabase.auth.getUser()
         
-        const { data, dataError } = await supabase.from("Businesses").insert(
-            {name: name , email: email, phone_number: phoneNumber, uuid: 1})
+        /*
+        const {dataError } = await supabase.from("Businesses").insert(
+            {name: name , email: email, phone_number: phoneNumber})
+        */
     
     }
     return (
